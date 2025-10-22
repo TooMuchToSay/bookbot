@@ -10,7 +10,7 @@ def main():
             dictionary = total_characters(file_contents)
             word_count = get_num_words(file_contents, total_words)
             total_words += word_count
-        print(f"============ BOOKBOT ============\nAnalyzing book found at books/frankenstein.txt...\n----------- Word Count ----------\nFound {total_words} total words\n--------- Character Count -------")
+        print(f"============ BOOKBOT ============\nAnalyzing book found at {sys.argv[1]}...\n----------- Word Count ----------\nFound {total_words} total words\n--------- Character Count -------")
         report = generate_report(dictionary)
         for i in range(0, len(report)):
             print(f"{report[i]['char'].strip()}: {report[i]['num']}")
